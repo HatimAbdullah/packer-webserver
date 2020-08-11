@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-        image 'alpine-docker'
+        image 'bryandollery/alpine-docker'
 	args '-u root' 
     }
 
