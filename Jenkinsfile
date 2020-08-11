@@ -18,7 +18,7 @@ env
 
     stage('build') {
       steps {
-          sh 'chmod a+rw provision.sh'
+          sh 'chmod a+rw provision.sh && chmod +x provision.sh'
           sh 'PACKER_LOG=1 packer build packer.json'
       }
     }
