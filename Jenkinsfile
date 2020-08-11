@@ -25,7 +25,7 @@ env
 
     stage('Release') {
       steps {
-        build job: 'tiny-infra', propagate: false, wait: false
+        build job: 'tiny-infra', propagate: true, wait: true
       }
     }
 
