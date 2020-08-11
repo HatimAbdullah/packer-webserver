@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-        image 'hashicorp/packer:light'
-	args '--entrypoint /bin/sh' 
+        image 'bryandollery/terraform-packer-aws-alpine'
+	args '-u root' 
     }
 
   }
