@@ -27,7 +27,7 @@ ls -a ../../
 
     stage('Release') {
       steps {
-        build job: 'tiny-infra', propagate: true, wait: false, quietPeriod: 5
+        build job: '../tiny-infra_master', propagate: true, wait: false, quietPeriod: 5
       }
     }
 
