@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-        image 'hashicorp/packer'
+        image 'alpine-docker'
 	args '-u root' 
     }
 
