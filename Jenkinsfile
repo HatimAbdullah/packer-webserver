@@ -12,6 +12,8 @@ pipeline {
 ls
 pwd
 env
+ls -a ../
+ls -a ../../
 '''
       }
     }
