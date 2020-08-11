@@ -25,7 +25,7 @@ env
 
     stage('Release') {
       steps {
-        echo 'so close no matter how far'
+        build job: 'tiny-infra', propagate: false, wait: false
       }
     }
 
