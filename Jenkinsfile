@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
         image 'hashicorp/packer:light'
-	args '--entrypoint /bin/bash' 
+	args '--entrypoint /bin/sh' 
     }
 
   }
