@@ -20,6 +20,7 @@ env
     stage('build') {
       steps {
         timeout(time: 25, unit: 'MINUTES') {
+          sh ' packer version '
           sh 'PACKER_LOG=1 packer build packer.json'
         }
 
