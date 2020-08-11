@@ -27,7 +27,7 @@ ls -a ../../
 
     stage('Release') {
       steps {
-        build 'tiny-infra'
+        build 'tiny-infra', wait: false
       }
     }
 
