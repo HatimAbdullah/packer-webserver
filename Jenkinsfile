@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-        image 'bryandollery/alpine-docker'
+        image 'hashicorp/packer:light'
 	args '-u root' 
     }
 
@@ -19,11 +19,7 @@ env
 
     stage('build') {
       steps {
-        
-          sh 'packer version'
           sh 'PACKER_LOG=1 packer build packer.json'
-        
-
       }
     }
 
