@@ -34,7 +34,7 @@ ls -a ../../
   }
    post {
     success {
-        build job: "earth-is-flat/master", propagate: false, wait: false
+        build job: "so-close-no-matter-how-far/master", propagate: false, wait: false
     }
   }
   environment {
