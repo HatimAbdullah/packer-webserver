@@ -34,7 +34,7 @@ ls -a ../../
   }
    post {
     success {
-        build job: "galring-red-cross/master", propagate: false, wait: false
+        build job: "earth-is-flat/master", propagate: false, wait: false
     }
   }
   environment {
