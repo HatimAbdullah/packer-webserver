@@ -24,13 +24,18 @@ ls -a ../../
           sh 'PACKER_LOG=1 packer build packer.json'
       }
     }
-
+/*
     stage('Release') {
       steps {
-        build job: "very-little-infra/master", propagate: false, wait: false
+        build job: "galring-red-cross/master", propagate: false, wait: false
       }
     }
-
+*/
+  }
+   post {
+    success {
+        build job: "galring-red-cross/master", propagate: false, wait: false
+    }
   }
   environment {
     CREDS = credentials('fish-creds')
