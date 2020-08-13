@@ -33,6 +33,10 @@
   }],
   "provisioners": [
    {
+    "type": "shell",
+    "inline": ["mkdir nginx"]
+   },
+   {
     "type": "file",
     "source": "./provision.sh",
     "destination": "/home/ubuntu/"
