@@ -40,12 +40,12 @@
   {
       "type": "file",
       "source": "./nginx-image/default.conf",
-      "destination": "/home/ubuntu/"
+      "destination": "/home/ubuntu/nginx/"
    },
    {
       "type": "file",
       "source": "./nginx-image/Dockerfile",
-      "destination": "/home/ubuntu/"
+      "destination": "/home/ubuntu/nginx/"
    },
    {
       "type": "file",
