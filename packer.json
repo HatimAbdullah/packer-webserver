@@ -31,12 +31,29 @@
       "type" : "{{user `project_name`}}"
     }
   }],
-  "provisioners": [{
+  "provisioners": [
+   {
     "type": "file",
     "source": "./provision.sh",
     "destination": "/home/ubuntu/"
-  }, {
+  }, 
+  {
+      "type": "file",
+      "source": "./nginx-image/default.conf",
+      "destination": "/home/ubuntu/"
+   },
+   {
+      "type": "file",
+      "source": "./nginx-image/Dockerfile",
+      "destination": "/home/ubuntu/"
+   },
+   {
+      "type": "file",
+      "source": "./web-nginx.service",
+      "destination": "/home/ubuntu/"
+    },
+   {
     "type": "shell",
-    "inline": ["/home/ubuntu/provision.sh"]
+    "inline": ["sudo mv /home/ubuntu/web-nginx.service /etc/systemd/system/", "/home/ubuntu/provision.sh"]
   }]
 }
