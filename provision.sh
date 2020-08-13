@@ -6,6 +6,6 @@ date > nobodyknows
 touch nginx/index.html
 echo 'not touched yet' > nginx/index.html
 sudo docker image build -t small-ws /home/ubuntu/nginx/.
-sudo docker create --name hola -p 80:80 -v /home/ununtu/nginx:/work small-ws
+sudo docker create --name hola -p 80:80 -v /home/ubuntu/nginx:/work small-ws
 sudo systemctl enable web-nginx
 
