@@ -21,6 +21,7 @@ spec:
   stages {
     stage('Validate Environment') {
       steps {
+        container('packer') {
         sh '''
 ls
 pwd
@@ -28,13 +29,16 @@ env
 ls -a ../
 ls -a ../../
 '''
+        }
       }
     }
 
     stage('build') {
       steps {
+        container('packer') {
           sh 'chmod a+rw provision.sh && chmod +x provision.sh'
           sh 'PACKER_LOG=1 packer build packer.json'
+        }
       }
     }
 /*
