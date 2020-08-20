@@ -9,8 +9,10 @@ metadata:
     some-label: some-label-value
 spec:
   containers:
-  - name: pawst
-    image: bryandollery/terraform-packer-aws-alpine:2
+  - name: packer
+    image: hashicorp/packer 
+    command: 
+    - bash
     tty: true
 """
     }
